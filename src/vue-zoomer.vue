@@ -124,6 +124,11 @@ export default {
       this.tryToScale(scale)
       this.onInteractionEnd()
     },
+    zoomToPosition( scale = 2, x, y) {
+      this.translateX = x / this.containerWidth;
+      this.translateY = y / this.containerHeight;
+      this.scale = scale;
+    },
     // Main Logic --------------------------------------------------------------
     // scale
     // Zoom the image with the point at the pointer(mouse or pinch center) pinned.
